@@ -31,9 +31,9 @@
 | 选择排序 | O(n^2) | O(n^2) | O(n^2) | O(1) | 不稳定 |
 | 堆排序 | O(nlogn) | O(nlogn) | O(nlogn) | O(1) | 不稳定 |
 | 归并排序 | O(nlogn) | O(nlogn) | O(nlogn) | O(n) | 稳定 |
-| 计数排序 | O(n^2) | O(n^2) | O(n) | O(n+k) | 稳定 |
-| 桶排序 | O(n^2) | O(n^2) | O(n) | O(n+k) | 稳定 |
-| 基数排序 | O(n^2) | O(n^2) | O(n) | O(n+k) | 稳定 |
+| 计数排序 | O(n+k) | O(n+k) | O(n+k) | O(n+k) | 稳定 |
+| 桶排序 | O(n+k) | O(n+k) | O(n+k) | O(n+k) | 稳定 |
+| 基数排序 | O(n) | O(n) | O(n) | O(n) | 稳定 |
 
 
 # 2 leetcode problem
