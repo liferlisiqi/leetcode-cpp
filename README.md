@@ -18,7 +18,18 @@
 
 ## 1.2 search algorithm
 
-### 
+| search algorithm | 查找复杂度 | 插入复杂度 | 删除复杂度 | space complex |
+| :------: | :------: | :------: | :------: | :------: |
+| 顺序查找 | O(n) | O(n) | O(n) | O(1) |
+| 二分查找 | O(logn) | O(n) | O(n) | O(nlogn) |
+| 插值查找 | O(log(logn)) | O(n^2) | O(n) | O(1) |
+| 二叉查找树 | O(logn) | O(n) | O(logn) | O(1) |
+| 选择排序 | O(n^2) | O(n^2) | O(n^2) | O(1) |
+| 堆排序 | O(nlogn) | O(nlogn) | O(nlogn) | O(1) |
+| 归并排序 | O(nlogn) | O(nlogn) | O(nlogn) | O(n) |
+| 计数排序 | O(n+k) | O(n+k) | O(n+k) | O(n+k) |
+| 桶排序 | O(n+k) | O(n+k) | O(n+k) | O(n+k) |
+| 基数排序 | O(n) | O(n) | O(n) | O(n) |
 
 ## 1.3 sort algorithm
 
