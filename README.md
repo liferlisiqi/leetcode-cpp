@@ -1,12 +1,12 @@
 # leetcode刷题总结(C++)
 
-## data struct
+## data structure
 
 
 ## search
 
 
-# sort
+## sort
 
 
 ## Array
