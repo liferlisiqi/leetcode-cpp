@@ -1,13 +1,30 @@
 # leetcode刷题总结(C++)
 
+
+# basics
 ## data structure
 
+### vector
 
-## search
+### string
+
+### deque
+
+### list
+
+### set
+
+### map
+
+### tree
+
+## search algorithm
 
 
-## sort
+## sort algorithm
 
+
+# leetcode problem
 
 ## Array
 
