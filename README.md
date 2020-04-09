@@ -25,6 +25,15 @@
 | sort algorithm | time complex(ave) | time complex(worst) | time complex(best) | space complex | stability |
 | :------: | :------: | :------: | :------: | :------: | :------: | 
 | 冒泡排序 | O(n^2) | O(n^2) | O(n) | O(1) | 稳定 |
+| 快速排序 | O(nlogn) | O(n^2) | O(nlogn) | O(nlogn) | 不稳定 |
+| 插入排序 | O(n^2) | O(n^2) | O(n) | O(1) | 稳定 |
+| 希尔排序 | O(nlogn) | O(n^1.5) | 增量序列决定 | O(1) | 不稳定 |
+| 选择排序 | O(n^2) | O(n^2) | O(n^2) | O(1) | 不稳定 |
+| 堆排序 | O(nlogn) | O(nlogn) | O(nlogn) | O(1) | 不稳定 |
+| 归并排序 | O(nlogn) | O(nlogn) | O(nlogn) | O(n) | 稳定 |
+| 计数排序 | O(n^2) | O(n^2) | O(n) | O(n+k) | 稳定 |
+| 桶排序 | O(n^2) | O(n^2) | O(n) | O(n+k) | 稳定 |
+| 基数排序 | O(n^2) | O(n^2) | O(n) | O(n+k) | 稳定 |
 
 
 # 2 leetcode problem
