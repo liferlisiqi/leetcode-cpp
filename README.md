@@ -4,14 +4,18 @@
 # 1 basics
 ## 1.1 data structure
 
-### vector
+- ### vector
+
 
 vector是封装动态数组的顺序容器，元素顺序存储，可以通过迭代器和指针访问元素。vector在内存中是自动管理的，按需扩张和收缩。通常占用多于静态数组的空间，以便分配更多内存用于管理将来的增长，占用空间在额外内存即将耗尽时重新分配。
 
 基础API
 
-'''c++
-include <vector>
+```c++
+#include <iostream>
+#include <vector>
+
+using namespace std;
 
 //构造函数
 vector<int> vec1; //无参数
@@ -19,22 +23,43 @@ vector<int> vec2(3); //n个元素
 vector<int> vec3(3,5); //n个val值
 vevtor<int> vec4(vec3); //vector对象
 vector<int> vec5(vec3.begin(), vec3.end()); //迭代器
+
+//元素访问
+cout << vec1[0] << endl; //[]下标访问
+cout << vec1.at(0) << endl; //at()下标访问，有越界检查
+cout << vec1.front() << endl; //第一个元素
+cout << vec1.back() << endl; //最后一个元素
+
+//元素增删
+vec1.push_back(3); //将元素添加到末尾
+vec1.pop_back(); //移除末尾元素，没有返回值
+vec1.insert(vec1.begin(), 3); //在迭代器位置前插入元素，注意insert可能导致迭代器非法话
+
+//属性
+cout << vec1.empty() << endl; //返回是否为空
+cout << vec1.size() << endl; //容纳元素数量
+cout << vec1.capacity() << endl; //占用存储空间可容纳元素数量
+```
+
+- ### string
+
   
-//
 
-'''
+- ### deque
 
+  
 
+- ### list
 
-### string
+  
 
-### deque
+- ### set
 
-### list
+  
 
-### set
+- ### map
 
-### map
+  
 
 ## 1.2 search algorithm
 
@@ -52,7 +77,7 @@ vector<int> vec5(vec3.begin(), vec3.end()); //迭代器
 ## 1.3 sort algorithm
 
 | sort algorithm | time complex(ave) | time complex(worst) | time complex(best) | space complex | stability |
-| :------: | :------: | :------: | :------: | :------: | :------: | 
+| :------: | :------: | :------: | :------: | :------: | :------: |
 | 冒泡排序 | O(n^2) | O(n^2) | O(n) | O(1) | 稳定 |
 | 快速排序 | O(nlogn) | O(n^2) | O(nlogn) | O(nlogn) | 不稳定 |
 | 插入排序 | O(n^2) | O(n^2) | O(n) | O(1) | 稳定 |
