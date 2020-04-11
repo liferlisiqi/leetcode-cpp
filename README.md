@@ -61,9 +61,9 @@ cout << vec1.capacity() << endl; //占用存储空间可容纳元素数量
 
   
 
-## 1.2 search algorithm
+## 1.2 search algorithm 查找算法
 
-| search algorithm | 查找复杂度 | 插入复杂度 | 删除复杂度 | space complex |
+| 查找算法 | 查找复杂度（平均/最坏） | 插入复杂度（平均/最坏） | 删除复杂度（平均/最坏） | 空间复杂度 |
 | :------: | :------: | :------: | :------: | :------: |
 | 顺序查找 | O(n/2) | O(n) | O(n/2) | O(1) |
 | 二分查找 | O(logn) | O(n/2) | O(n/2) | O(nlogn) |
@@ -74,9 +74,9 @@ cout << vec1.capacity() << endl; //占用存储空间可容纳元素数量
 | B树 | O(logn) | O(logn) | O(logn) | O(n) |
 | 哈希函数 | O(1) | O(1) | O(1) | O(1) |
 
-## 1.3 sort algorithm
+## 1.3 sort algorithm 排序算法
 
-| sort algorithm | time complex(ave) | time complex(worst) | time complex(best) | space complex | stability |
+| 排序算法 | 平均时间复杂度 | 最坏时间复杂度 | 最好时间复杂度 | 空间复杂度 | 稳定性 |
 | :------: | :------: | :------: | :------: | :------: | :------: |
 | 冒泡排序 | O(n^2) | O(n^2) | O(n) | O(1) | 稳定 |
 | 快速排序 | O(nlogn) | O(n^2) | O(nlogn) | O(nlogn) | 不稳定 |
