@@ -10,7 +10,7 @@ vector是封装动态数组的顺序容器，元素顺序存储，可以通过�
 
 基础API
 
-'''c++
+```c++
 include <vector>
 
 //构造函数
@@ -19,10 +19,11 @@ vector<int> vec2(3); //n个元素
 vector<int> vec3(3,5); //n个val值
 vevtor<int> vec4(vec3); //vector对象
 vector<int> vec5(vec3.begin(), vec3.end()); //迭代器
-  
-//
 
-'''
+//
+```
+
+
 
 
 
@@ -52,7 +53,7 @@ vector<int> vec5(vec3.begin(), vec3.end()); //迭代器
 ## 1.3 sort algorithm
 
 | sort algorithm | time complex(ave) | time complex(worst) | time complex(best) | space complex | stability |
-| :------: | :------: | :------: | :------: | :------: | :------: | 
+| :------: | :------: | :------: | :------: | :------: | :------: |
 | 冒泡排序 | O(n^2) | O(n^2) | O(n) | O(1) | 稳定 |
 | 快速排序 | O(nlogn) | O(n^2) | O(nlogn) | O(nlogn) | 不稳定 |
 | 插入排序 | O(n^2) | O(n^2) | O(n) | O(1) | 稳定 |
