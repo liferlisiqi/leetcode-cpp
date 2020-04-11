@@ -43,23 +43,65 @@ cout << vec1.capacity() << endl; //占用存储空间可容纳元素数量
 
 - ### string
 
-  
+c++从c继承的字符串概念仍然是以 '\0' 为结束符的char数组，STL中的std::string是std::basic_string的一个特化，可以将字符串作为一个类型，实现复制、赋值和比较等操作，不必担心内存大小和占用内存实际长度等具体问题。
+
+基础API
+
+```c++
+#include<iostream>
+#include<string>
+#include<sstream>
+
+using namespace std;
+
+//构造函数
+string str1; //无参初始化
+string str2 = "abc"; //最简单的字符串初始化
+char *s = "abc";
+string str3(s); //用c字符串初始化
+string str4(3, 'c'); //用n个字符初始化
+string str5(str4); //全部复制
+
+//标准输入
+cin >> str1; //读取以空格或回车为结尾的字符序列
+getline(cin, str1); //读取整行的字符，遇到分界符、回车符、文件结束符时终止操作
+getline(cin, str1, " "); //参数3指定分界符
+
+//元素访问
+cout << str1[0] << endl; //[]返回下标位置的字符
+cout << str1.at(0) << endl; //at()返回下标位置字符，提供越界检查，超出范围抛出out_of_range异常
+
+
+
+
+```
+
+
+
+
+
+
 
 - ### deque
 
-  
+
+
 
 - ### list
 
-  
+
+
 
 - ### set
 
-  
+
+
 
 - ### map
 
   
+
+
 
 ## 1.2 search algorithm 查找算法
 
