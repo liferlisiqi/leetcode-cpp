@@ -12,14 +12,10 @@ vector是封装动态数组的顺序容器，元素顺序存储，可以通过�
 基础API
 
 ```c++
-<<<<<<< HEAD
 #include <iostream>
 #include <vector>
 
 using namespace std;
-=======
-include <vector>
->>>>>>> fa216d285cbe33bdddefd7a2c7fb8310da44dd82
 
 //构造函数
 vector<int> vec1; //无参数
@@ -28,7 +24,6 @@ vector<int> vec3(3,5); //n个val值
 vevtor<int> vec4(vec3); //vector对象
 vector<int> vec5(vec3.begin(), vec3.end()); //迭代器
 
-<<<<<<< HEAD
 //元素访问
 cout << vec1[0] << endl; //[]下标访问
 cout << vec1.at(0) << endl; //at()下标访问，有越界检查
@@ -51,12 +46,6 @@ cout << vec1.capacity() << endl; //占用存储空间可容纳元素数量
   
 
 - ### deque
-=======
-//
-```
-
-
->>>>>>> fa216d285cbe33bdddefd7a2c7fb8310da44dd82
 
   
 
