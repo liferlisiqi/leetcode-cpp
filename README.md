@@ -6,6 +6,25 @@
 
 ### vector
 
+vector是封装动态数组的顺序容器，元素顺序存储，可以通过迭代器和指针访问元素。vector在内存中是自动管理的，按需扩张和收缩。通常占用多于静态数组的空间，以便分配更多内存用于管理将来的增长，占用空间在额外内存即将耗尽时重新分配。
+
+基础API
+'''c++
+include <vector>
+
+//构造函数
+vector<int> vec1; //无参数
+vector<int> vec2(3); //n个元素
+vector<int> vec3(3,5); //n个val值
+vevtor<int> vec4(vec3); //vector对象
+vector<int> vec5(vec3.begin(), vec3.end()); //迭代器
+  
+//
+
+'''
+
+
+
 ### string
 
 ### deque
