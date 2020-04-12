@@ -64,21 +64,47 @@ string str5(str4); //全部复制
 
 //标准输入
 cin >> str1; //读取以空格或回车为结尾的字符序列
+cout << str1 <<endl;
 getline(cin, str1); //读取整行的字符，遇到分界符、回车符、文件结束符时终止操作
+cout << str1 << endl;
 getline(cin, str1, " "); //参数3指定分界符
+cout << str1 << endl;
 
 //元素访问
 cout << str1[0] << endl; //[]返回下标位置的字符
 cout << str1.at(0) << endl; //at()返回下标位置字符，提供越界检查，超出范围抛出out_of_range异常
+cout << str1.front() << endl; //返回第一个字符
+cout << str1.back() << endl; //返回最后一个字符
+cout << str1.c_str() << endl; //返回c字符数组
 
+//属性
+cout << str1.empty() << endl; //字符串是否未空
+cout << str1.size() << " " << str1.length() << endl; //字符串长度
 
+//增，三种方法: +=, push_back, append，建议基础操作使用+=,复杂操作使用append
+cout << str2 + "def" << endl; //使用+号增加字符串
+cout << str2 + 'd' + 'e' + 'f' << endl; //使用+号增加字符
+str2 += {'d', 'e', 'f'};
+cout << str2 << endl; //使用+号增加
 
+str2.push_back('d'); //push_back只能在结尾添加一个字符，功能单一
+str2.push_back('e');
+str2.push_back('f');
 
+str2.append("def");
+str2.append(3, 'd');
+str2.append(s);
+
+//查，
+str3 += "bc";
+cout << str3.find('a') << endl; //find()寻找首个等于给定 字符序列 的字串
+cout << str3.find("bc") << endl; 
+cout << str3.find_first_of("bc") << endl; //find_first_of()寻找等于给定字符序列中字符之一的首个字符                                      
 ```
 
 
 
-
+[std::string::append vs std::string::push_back() vs Operator += in C++](https://www.geeksforgeeks.org/stdstringappend-vs-stdstringpush_back-vs-operator-c/)
 
 
 
