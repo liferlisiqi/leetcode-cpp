@@ -111,6 +111,22 @@ cout << str3.find_first_of("bc") << endl; //find_first_of()寻找等于给定字
 - ### deque
 
 
+deque（双端队列）是有下标顺序容器，允许在首尾两端快速地插入及删除，且不会非法化指向其他元素的指针或引用。deque的元素不是相接存储的，典型的实现是用单独分配的固定大小数组序列，外加额外的登记，所以下标访问需要二次指针解引用。
+
+基础API
+
+```c++
+#include<iostream>
+#include<deque>
+
+using namespace std;
+
+
+
+```
+
+
+
 
 
 - ### list
