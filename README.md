@@ -143,12 +143,33 @@ cout << que2.size() << endl;
 
 ```
 
-
-
-
-
 - ### list
 
+
+list（双向链表）是支持常数时间内从容器任何位置插入和移除元素的容器，不支持快速随机访问，通常实现为双向链表。在list内添加、移除和移动元素不会非法化迭代器或引用，仅在对应元素被删除时非法化。list<T>容器的每个T对象通常都被包装在一个内部节点对象中，节点维护了两个指针，一个指向前一个节点，一个指向后一个节点，这些指针将节点连接成一个链表。
+
+基础API
+
+```c++
+#include <iostream>
+#include <list>
+
+using namespace std;
+
+//构造函数
+list<int> lst1;
+list<int> lst2 = {3, 5, 7, 2, 8, 4};
+
+//元素访问，复杂度O(n),不能通过下标访问
+cout << lst1.front() << endl;
+cout << lst2.back() << endl;
+cout << *lst2.begin() << endl; //通过迭代器访问
+cout << *(lst2.begin() + 4) << endl;
+cout << *lst2.end() << endl; //指向最后一个元素下一个，直接用会报错
+cout << *(--lst2.end()) << endl; //指向最后一个元素
+
+//增删，复杂度O(1)
+```
 
 
 
