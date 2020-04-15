@@ -121,7 +121,25 @@ deque（双端队列）是有下标顺序容器，允许在首尾两端快速地
 
 using namespace std;
 
+//构造函数
+deque<int> que1;
+deque<int> que2 = { 3,5,7,9,2,4,6,8,3 };
 
+//元素访问,deque的访问操作慢于vector，由于内部组织元素的方式不同
+cout << que2[0] << endl;
+cout << que2.at(0) << endl;
+cout << que2.front() << endl;
+cout << que2.back() << endl;
+
+//增删，这里是deque的独特API
+que2.push_back(0); //在队尾元素增加元素
+que2.pop_back(); //删除队尾元素
+que2.push_front(0); //在队首增加元素
+que2.pop_front(); //删除队首元素
+
+//属性，由于存储方式不同，deque的容器大小总是和总量相等，所以没有定义capacity()
+cout << que2.empty() << endl;
+cout << que2.size() << endl;
 
 ```
 
