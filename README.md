@@ -102,11 +102,7 @@ cout << str3.find("bc") << endl;
 cout << str3.find_first_of("bc") << endl; //find_first_of()寻找等于给定字符序列中字符之一的首个字符                                      
 ```
 
-
-
 [std::string::append vs std::string::push_back() vs Operator += in C++](https://www.geeksforgeeks.org/stdstringappend-vs-stdstringpush_back-vs-operator-c/)
-
-
 
 - ### deque
 
@@ -181,9 +177,42 @@ lst2.insert(--lst2.end(), 8);
 lst2.unique(); //比较并删除连续的重复元素，留下其中一个
 ```
 
-
-
 - ### set
+
+定义set的模板有四种：set、multiset、unordered_set、unordered_multiset。其中两种（set multiset）使用比较函数对元素排序。另外两种（unordered_set unordered_multiset）使用哈希函数来保存元素。set是关联容器，含有key类型对象的已排序集，搜索、移除和插入拥有对数复杂度，通常以红黑树实现。
+
+基础API-set/multiset
+
+```c++
+#include <iostream>
+#include <set>
+
+using namespace std;
+
+//构造函数
+set<int> set1;
+set<int> set2 = { 3, 5, 8, 1, 4, 9 };
+
+//元素访问
+auto it = set2.find(1); //如果find函数找到和参数匹配的元素，则返回对应的迭代器
+cout << *it << endl;
+it = set2.find(2); //如果find函数找不到匹配元素，则返回结束迭代器，下面的打印就会报错
+cout << *it << endl;
+
+//元素增删
+auto it = set2.insert(3);
+cout << *it.first << endl; //inset返回一个pair<iterator, bool>, 插入元素的迭代器
+set2.erase(3); //erase删除匹配的元素
+set2.erase(++set2.begin()); //删除迭代器对应的元素
+```
+
+基础API-unordered_set/unordered_multiset
+
+```c++
+#include <iostream>
+#include <unordered_set>
+
+```
 
 
 
