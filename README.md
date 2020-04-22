@@ -198,6 +198,8 @@ auto it = set2.find(1); //如果find函数找到和参数匹配的元素，则�
 cout << *it << endl;
 it = set2.find(2); //如果find函数找不到匹配元素，则返回结束迭代器，下面的打印就会报错
 cout << *it << endl;
+cout << set2.count(4) << endl;
+cout << set2.count(3) << endl;
 
 //元素增删
 auto it = set2.insert(3);
@@ -205,6 +207,8 @@ cout << *it.first << endl; //inset返回一个pair<iterator, bool>, 插入元素
 set2.erase(3); //erase删除匹配的元素
 set2.erase(++set2.begin()); //删除迭代器对应的元素
 ```
+
+[【C++ STL学习之五】容器set和multiset](https://blog.csdn.net/xiajun07061225/article/details/7459206?depth_1-utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromBaidu-18&utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromBaidu-18)
 
 基础API-unordered_set/unordered_multiset
 
