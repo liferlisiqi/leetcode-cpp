@@ -179,9 +179,9 @@ lst2.unique(); //比较并删除连续的重复元素，留下其中一个
 
 - ### set
 
-定义set的模板有四种：set、multiset、unordered_set、unordered_multiset。其中两种（set multiset）使用比较函数对元素排序。另外两种（unordered_set unordered_multiset）使用哈希函数来保存元素。set是关联容器，含有key类型对象的已排序集，搜索、移除和插入拥有对数复杂度，通常以红黑树实现。
+定义set的模板有四种：set、multiset、unordered_set、unordered_multiset。其中两种（set multiset）使用比较函数对元素排序。另外两种（unordered_set unordered_multiset）使用哈希函数来保存元素。
 
-set不能直接改变元素值，会打乱原有的顺序。需要先删除旧元素，再插入新元素。存取元素只能通过迭代器。multiset与set的区别是允许重复元素。
+set是关联容器，含有key类型对象的**已排序集**，搜索、移除和插入拥有对数复杂度，通常以红黑树实现。set不能直接改变元素值，会打乱原有的顺序。需要先删除旧元素，再插入新元素。存取元素只能通过迭代器。multiset与set的区别是允许重复元素。
 
 基础API-set/multiset
 
@@ -216,12 +216,28 @@ set2.erase(++set2.begin()); //删除迭代器对应的元素
 
 [【C++ STL学习之五】容器set和multiset](https://blog.csdn.net/xiajun07061225/article/details/7459206?depth_1-utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromBaidu-18&utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromBaidu-18)
 
+unordered_set是含有key类型唯一对象集合的关联容器，基于哈希表实现，搜索、插入和移除拥有平均常数时间复杂度，代价是存储空间大。元素不进行排序，而是组织进桶中。元素被放进哪个桶完全依赖哈希值，所以允许对快速访问，因为哈希一旦确定就能准确指代元素被放进的桶。
+
 基础API-unordered_set/unordered_multiset
 
 ```c++
 #include <iostream>
 #include <unordered_set>
+using namespace std;
 
+//构造函数，同set
+unordered_set<int> set1;
+unordered_set<int> set2 = { 3, 5, 8, 1, 4, 9 };
+
+//元素访问
+auto it = set2.find(3) << endl;
+cout << *it << endl;
+cout << set2.bucket_count() << endl;//返回桶数量
+cout << set2.load_factor() << endl; //返回每个桶的平均元素数量
+
+//元素增删
+set2.insert(7);
+cout << set2.erase(3) << endl;
 ```
 
 
