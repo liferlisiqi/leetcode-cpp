@@ -235,9 +235,12 @@ cout << *it << endl;
 cout << set2.bucket_count() << endl;//返回桶数量
 cout << set2.load_factor() << endl; //返回每个桶的平均元素数量
 
-//元素增删
-set2.insert(7);
+//元素增删，同set
+auto it2 = set2.insert(7);
+out << *it2.first << it2.second << endl;
 cout << set2.erase(3) << endl;
+
+//桶操作
 ```
 
 
@@ -245,7 +248,36 @@ cout << set2.erase(3) << endl;
 
 - ### map
 
-  
+序列容器不提供方便的数据访问机制，当我们处理姓名和地址时，序列容器并不能如我们所愿，相比之下，map容器提供了一种更为有效的存储和访问数据方法。map是有序键值对容器，，他的元素是唯一的，搜索、插入和移除拥有对数时间复杂度，通常实现为红黑树。
+
+map容器是关联容器的一种，对象的位置取决于和它关联的键值，键可以是基本类型也可以是类类型，字符串经常被用来作为键。
+
+基础API
+
+```c++
+#include <iostream>
+#include <map>
+#include <unordered_map>
+
+using namespace std;
+
+//构造函数
+map<string, int> map1;//map中的元素以pair的形式存在
+map<string, int> map2 = { make_pair("yi", 1) , make_pair("er", 2) ,make_pair("san", 3) };
+
+//元素访问
+cout << map2.at("yi") << endl; //通过键值查看对象，返回对应key的迭代器，若找不到则返回尾迭代器
+auto it = map2.find("yi");
+cout << it->first << " " << it->second << endl;
+
+//元素增删
+map2.insert(make_pair("si", 4)); //通过pair的形式插入元素
+auto it2 = make_pair("wu", 5);
+map2.insert(it2);
+map2.emplace(make_pair("liu", 6));//直接构造元素？没有get到
+cout << map2.erase("qi") << endl;
+cout << map2.erase("liu") << endl;//erase删除键对应元素，返回0或1
+```
 
 
 
