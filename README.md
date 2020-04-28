@@ -269,7 +269,9 @@ map<string, int> map2 = { make_pair("yi", 1) , make_pair("er", 2) ,make_pair("sa
 cout << map2.at("yi") << endl; //通过键值查看对象，返回对应key的迭代器，若找不到则返回尾迭代器
 auto it = map2.find("yi");
 cout << it->first << " " << it->second << endl;
-
+for(auto it : map2)//遍历map返回的是pair变量，不是迭代器，可以通过&返回引用值来修改map元素内容
+    cout << it.first << " " << it.second << " ";
+ 
 //元素增删
 map2.insert(make_pair("si", 4)); //通过pair的形式插入元素
 auto it2 = make_pair("wu", 5);
@@ -277,6 +279,8 @@ map2.insert(it2);
 map2.emplace(make_pair("liu", 6));//直接构造元素？没有get到
 cout << map2.erase("qi") << endl;
 cout << map2.erase("liu") << endl;//erase删除键对应元素，返回0或1
+map2["ba"] = 8;
+map2["qi"] = 7;//map可以通过下边运算符，若key不存在则插入键值对，若存在则修改对应的对象值
 ```
 
 
@@ -293,6 +297,60 @@ cout << map2.erase("liu") << endl;//erase删除键对应元素，返回0或1
 | 红黑树 | O(logn) | O(logn) | O(logn) | O(1) |
 | B树 | O(logn) | O(logn) | O(logn) | O(n) |
 | 哈希函数 | O(1) | O(1) | O(1) | O(1) |
+
+- 顺序查找
+
+
+
+```c++
+int search::sequenceSearch(vector<int> vec, int input)
+{
+	for (int i = 0; i < vec.size(); i++)
+		if (vec[i] == input) return i;
+	return -1;
+}
+```
+
+
+
+- 二分查找
+
+二分查找
+
+```c++
+int search::binarySearch1(vector<int> vec, int input)
+{
+	int low, mid, high;
+	low = 0;
+	high = vec.size() - 1;
+	while (low <= high)
+	{
+		mid = (low + high) / 2;
+		if (vec[mid] == input)
+			return mid;
+		else if (vec[mid] < input)
+			low = mid + 1;
+		else
+			high = mid - 1;
+	}
+	return -1;
+}
+
+int search::binarySearch2(vector<int> vec, int input, int low, int high)
+{
+	if (low > high)
+		return -1;
+	int mid = low + (high - low) / 2;
+	if (vec[mid] == input)
+		return mid;
+	else if (vec[mid] < input)
+		return binarySearch2(vec, input, mid + 1, high);
+	else
+		return binarySearch2(vec, input, mid, high + 1);
+}
+```
+
+
 
 ## 1.3 sort algorithm 排序算法
 
